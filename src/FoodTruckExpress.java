@@ -31,6 +31,12 @@ public class FoodTruckExpress {
             for (j = 0; j < 4; j++) {
                 System.out.print("Ingrese ventas de " + productos[i] + " en el turno " + turnos[j] + " ($): ");
                 valor = entrada.nextDouble();
+
+                while (valor < 0) {
+                    System.out.print("Error: El valor no puede ser negativo. Intente de nuevo: ");
+                    valor = entrada.nextDouble();
+                }
+
                 ventas[i][j] = valor;
             }
         }
